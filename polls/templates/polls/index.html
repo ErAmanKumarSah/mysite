@@ -1,0 +1,48 @@
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+{% if latest_aboutus_list %}
+    <ul>
+    {% for aboutus in latest_aboutus_list %}
+        <li><a href="/polls/{{ aboutus.id }}/">{{ aboutus.texting }}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No aboutus available.</p>
+{% endif %}
+
+{% block content %}
+<div class = "container-fluid">
+	<div class="panel panel-default">
+		<div class="panel-heading">Details of all client ADM</div>
+		<div class="panel-body"style="height:65vh; overflow-y: scroll;">
+			<table class="table table-condensed table-bordered table-hover">
+				<thead>
+					<tr>
+						<td>Serial No.</td>
+						<td>Client Code</td>
+						<td>Client Name</td>
+						<td>Name</td>
+						<td>User</td>
+						<td>Summary</td>
+						<td>Added On</td>
+						<td>Size</td>
+						<td>Last Access Date</td>
+					</tr>
+				</thead>
+			</table>
+		</div> 
+	</div>	
+</div>	
+{% endblock %}
