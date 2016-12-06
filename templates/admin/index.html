@@ -3,7 +3,7 @@
 
 {% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "static/polls/dashboard.css" %}" />{% endblock %}
 
-{% block coltype %}colMS{% endblock %}
+{% block coltype %}{% endblock %}
 
 {% block bodyclass %}{{ block.super }} dashboard{% endblock %}
 
@@ -81,7 +81,6 @@
 </div>
 {% endblock %}
 
-<!-- {% block content %}
 <div class = "container-fluid">
     <div class="panel panel-default">
         <div class="panel-heading">Details of all client ADM</div>
@@ -104,5 +103,3 @@
         </div> 
     </div>  
 </div>  
-{% endblock %}
- -->

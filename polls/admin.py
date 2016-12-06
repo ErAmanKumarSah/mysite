@@ -30,6 +30,11 @@ class QuestionAdmin(admin.ModelAdmin):
 	]
 	inlines = [ChoiceInline]
 
+class ChoiceAdmin(admin.ModelAdmin):
+	list_display = ('choice_text',)
+	#list_filter = ('choice_text','pub_date')
+	search_fields = ['choice_text']
+
 #admin.site.register(Aboutus, AboutusAdmin)
-admin.site.register(Choice)
+admin.site.register(Choice, ChoiceAdmin)
 admin.site.register(Question, QuestionAdmin)

@@ -1,9 +1,9 @@
 {% if latest_question_list %}
-    <ul>
+    <ol class="question-ol">
     {% for question in latest_question_list %}
         <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}
     {% endfor %}
-    </ul>
+    </ol>
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
@@ -11,14 +11,3 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
-
-{% if latest_aboutus_list %}
-    <ul>
-    {% for aboutus in latest_aboutus_list %}
-        <li><a href="/polls/{{ aboutus.id }}/">{{ aboutus.texting }}
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No aboutus available.</p>
-{% endif %}
-

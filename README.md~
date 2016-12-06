@@ -1,6 +1,28 @@
-# Complete Django documentation version--1.6 for beginers.
+# Complete Django documentation version--1.8 for beginers.
 
 
 @Author : Aman Kumar
+email : amanjraj@gmail.com
+
 
 This Project has been developed using python in django web framework
+
+Instruction :
+create folder on your machine(mkdir newProject)
+cd newProject
+git init
+git clone git-project-link
+
+activate source and goto project folder
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+
+check in browser:
+127.0.0.1:8000
+127.0.0.1:8000/admin
+127.0.0.1:8000/polls
+
+Installation :
+Django==1.8.3
+MySQL-python==1.2.5

@@ -1,6 +1,9 @@
-li a {
-	color: green;
+.question-ol li a{
+	color: #2d2d2d;
 	}
+.question-ol li a:hover{
+	color: green;
+}
 body {
 	background: white url("images/background.jpg") no-repeat left bottom;
 	background-color:lightgray;
